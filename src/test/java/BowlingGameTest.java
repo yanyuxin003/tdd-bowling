@@ -49,7 +49,20 @@ public class BowlingGameTest {
     }
 
 
-       @Test
+    @Test
+    void should_return_the_bowling_scoring_test3() throws Exception{
+        //given
+        BowlingGame bowlingGameScore = new BowlingGame();
+        //when
+        int[] scores = {1,2,3,4,5,3,6,7,6,8,2,5,6,5,6,7,8,10,8,9};
+        int result =bowlingGameScore.calculateTotalScore(scores);
+        //when
+        assertEquals(108,result);
+    }
+
+
+
+    @Test
        void should_return_the_bowling_scoring_test_exception() throws Exception{
            //given
            BowlingGame bowlingGameScore = new BowlingGame();
